@@ -1,0 +1,113 @@
+.dialogComContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+}
+
+.dialogMask {
+    background: #333;
+    opacity: 0.50;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.dialogContainer{
+    width: 490rpx;
+    height: 300rpx;
+    position: absolute;
+    left: calc((100% - 490rpx) / 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:12rpx;
+    z-index: 11;
+}
+
+.dialogButton {
+    z-index: 11;
+}
+
+.bg-darkOrange{
+    background: #FDA040;
+}
+
+.bg-darkGray {
+    background: #444444;
+}
+
+.color-darkOrange {
+    color: #FDA040;
+}
+
+.text-30 {
+    font-size: 30rpx;
+}
+.text-26 {
+    font-size: 26rpx;
+}
+
+
+.marginBottom {
+    margin-bottom: 12rpx;
+}
+
+
+.bg-lightGray {
+    background: #DCDCDC;
+}
+
+.color-cancelGray {
+    color: #6D6D6D;
+}
+
+.color-default {
+    color: #333333;
+}
+
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 42rpx;
+}
+
+.button-group-btn {
+    width:169rpx;
+    height:60rpx;
+    border-radius:6rpx;
+    text-align: center;
+    line-height: 60rpx;
+}
+
+.single-button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 42rpx;
+    width: 100%;
+}
+
+.single-button-btn {
+    width: 394rpx;
+    height:72rpx;
+    line-height: 72rpx;
+    border-radius:6rpx;
+    text-align:center;
+}
+
+.bg-white {
+    background: #fff;
+}
+
+.bg-black {
+    background: #333;
+}

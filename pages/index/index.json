@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "navigationBar": "/components/navigationBar/navigationBar",
+    "dialog": "/components/dialog/dialog"
+  }
+}

@@ -1,0 +1,49 @@
+.bg-white {
+    background: #fff;
+}
+
+.bg-transparent {
+    background: transparent;
+}
+
+.simple-nav-bar {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-size-34 {
+    font-size: 34rpx;
+}
+
+.font-weight-bold {
+    font-weight: 500;
+}
+
+.margin-btw-nav-content {
+    margin-bottom: 20rpx;
+}
+
+.arrowPrevIcon {
+    width: 40rpx;
+    height: 40rpx;
+    padding: 30rpx 60rpx 30rpx 30rpx;
+    position: fixed;
+    z-index: 1000;
+}
+
+.color-white {
+    color: #fff
+}
+

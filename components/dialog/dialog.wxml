@@ -1,0 +1,34 @@
+<cover-view class="dialogComContainer" hidden="{{clickOk || clickCancel}}">
+    <cover-view class='dialogMask'></cover-view>
+    <cover-view class='dialogContainer color-default text-30 bg-white' style="top: {{changedTop}}px">
+        <cover-view class='marginBottom'>{{first}}</cover-view>
+        <cover-view>{{second}}</cover-view>
+
+        <cover-view wx:if="{{buttonType != 2}}" class="single-button-group text-middle">
+            <block wx:if="{{buttonType == 1}}">
+                <!--confirm按钮-->
+                <cover-view bindtap="onConfirm"
+                            class="single-button-btn bg-darkGray dialogButton text-30 color-darkOrange">
+                    {{confirmText}}
+                </cover-view>
+            </block>
+            <block wx:else>
+                <!--cancel按钮-->
+                <cover-view bindtap="onClose" class="bg-darkGray dialogButton text-30 color-darkOrange">{{cancelText}}
+                </cover-view>
+            </block>
+        </cover-view>
+
+        <cover-view wx:else class="button-group text-26"><!--两个按钮-->
+            <cover-view bindtap="onClose"
+                        class="button-group-btn bg-lightGray dialogButton color-cancelGray" style="margin-right:40rpx">
+                {{cancelText}}
+            </cover-view>
+            <cover-view bindtap="onConfirm"
+                        class="button-group-btn bg-black dialogButton color-darkOrange">{{confirmText}}
+            </cover-view>
+        </cover-view>
+
+    </cover-view>
+
+</cover-view>

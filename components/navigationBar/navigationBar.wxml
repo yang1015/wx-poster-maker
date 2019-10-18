@@ -1,0 +1,6 @@
+<view>
+    <view class='simple-nav-bar {{bg && bg=="transparent"? "bg-transparent" : "bg-white"}}' style="height:{{navBarHeight}}px; padding-top:{{statusBarHeight}}px">
+        <view class = "nav-title text-size-34 font-weight-bold {{titleColor && titleColor == 'white'? 'color-white':''}}">{{navTitle}}</view>
+    </view>
+    <view class = "clearfix2 margin-btw-nav-content" style="height:{{navBarHeight}}px; padding-top:{{statusBarHeight}}px"/>
+</view>

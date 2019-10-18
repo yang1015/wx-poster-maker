@@ -1,0 +1,59 @@
+<view>
+    <image src="/resources/invitationBanner.png" style="width: 100vw;height:529rpx"/>
+    <view style="position: absolute;top:0;left:0;right:0">
+        <navigationBar navTitle="邀请有礼" bg="transparent" titleColor="white"/>
+    </view>
+
+    <view style="margin-top: 30rpx; margin-bottom: 30rpx; left:0;right:0; text-align: center"
+          class="relative-container">
+        <button class="common-long-button button-radius"
+                style="margin-bottom: 10rpx"
+                disabled="{{clickedToInviteOtherFriends}}"
+                bindtap="goInvite">立即邀请微信好友
+        </button>
+        <view class="text-middle">生成卡片分享至朋友圈</view>
+    </view>
+
+    <view class="invitation-list bg-white">
+        <view style="height: 60rpx; line-height: 60rpx;">
+            <image src="/resources/myInvitation.png" style="width: 35rpx; height:38rpx; margin-right: 6px"/>
+            <text class="text-middle">我的邀请</text>
+        </view>
+        <text class="color-darkOrange text-small">(每邀请一位好友首单洗车可得优惠)</text>
+        <view class="shareWithList">
+            <view class="each-share-with-person-wrapper text-small" wx:for="{{shareWithList}}" wx:key="index">
+                <view style="display: flex; align-items: center">
+                    <image src="{{item.avatarUrl}}"
+                           style="border-radius: 50%; width: 60rpx; height: 60rpx; margin-right: 30rpx"/>
+                    <view>{{item.name}}</view>
+                </view>
+                <view>
+                    {{item.content}}
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+    <view wx:if="{{visible}}" class="poster-container">
+        <view class="poster-canvas">
+            <canvas canvas-id='myCanvas' class="myCanvas" style="{{'width: ' + (canvasW) + 'px; height: ' + (canvasH) + 'px;'}}"></canvas>
+        </view>
+        <view class="poster-buttons">
+            <view style="text-align: center" class="saveBtn" bindtap="checkAuthorityBeforeSave">
+                <image style="width: 80rpx; height: 80rpx" src="/resources/save.png"/>
+                <view class="text-middle">保存</view>
+            </view>
+            <button class="onCloseBth bg-white text-center text-middle" bindtap="onClose">取消</button>
+        </view>
+
+        <dialog wx:if = "{{showPhotoAlbumAuthRequest}}"
+                first="请现授权才可以保存喔"
+                buttonType="{{2}}"
+                confirmText="确定" cancelText = "取消"
+                bindokdialog="openSettings" bindnodialog = "closeDialog"/>
+    </view>
+
+
+
+</view>
