@@ -51,7 +51,6 @@ Page({
             src: 'https://app.spsing.cn/Content/Images/poster2.png',
             success(res) {
                 let tempFilePath = res.path
-                // ctx.drawImage(tempFilePath, 0, 0, 300, 600);
                 ctx.setFillStyle('#333333')
                 ctx.drawImage(tempFilePath, 0, 0, this_.data.canvasW, this_.data.canvasH)
                 ctx.draw(true);
